@@ -1,12 +1,8 @@
-# DISABLED AUTO-RUN: Originally triggered on auto-triggers
-# Converted to manual execution only - 2025-10-18
-# Backup available at: target-branch.yml.backup
 name: Make sure new PRs are sent to dev
 
 on:
-  workflow_dispatch:  # Manual trigger only
-#   pull_request_target:
-#     types: [opened, edited]
+  pull_request_target:
+    types: [opened, edited]
 
 jobs:
   check-branch:
